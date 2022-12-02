@@ -4,7 +4,8 @@
     "description": "My solutions to https://adventofcode.com",
     "main": "index.js",
     "scripts": {
-        "day1": "ts-node ./2022/day-1/day1.ts",
+        "day1": "ts-node ./2022/day-1/cli.ts",
+        "day2": "ts-node ./2022/day-2/cli.ts",
         "compile": "tsc -p ."
     },
     "repository": {

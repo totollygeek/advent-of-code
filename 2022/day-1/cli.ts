@@ -33,7 +33,7 @@ function getTopThreeCalories(allCalories: string): number {
             console.log('ERROR:', err);
         }
 
-        console.log('Maximum value: ', getMaxCalories(data));
-        console.log('Top three calories value: ', getTopThreeCalories(data));
+        console.log('1) Maximum value: ', getMaxCalories(data));
+        console.log('2) Top three calories value: ', getTopThreeCalories(data));
     });
 })().catch(e => console.error(e));
