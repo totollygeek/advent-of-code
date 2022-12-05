@@ -6,6 +6,8 @@
     "scripts": {
         "day1": "ts-node ./2022/day-1/cli.ts",
         "day2": "ts-node ./2022/day-2/cli.ts",
+        "day3": "ts-node ./2022/day-3/cli.ts",
+        "day4": "ts-node ./2022/day-4/cli.ts",
         "compile": "tsc -p ."
     },
     "repository": {

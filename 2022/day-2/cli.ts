@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+import * as input from '../../utils/input';
 
 function convertShape(shapeSign: string): string {
     switch (shapeSign) {
@@ -96,16 +95,8 @@ function calculateDecryptedResult(rounds: { opponent: string, you: string }[]): 
 }
 
 (async function run() {
-    const absolutePath = path.resolve("./2022/day-2/input.txt");
-    console.log(absolutePath);
-
-    fs.readFile(absolutePath, 'utf-8', (err: any, data: string) => {
-        if (err) {
-            console.log('ERROR:', err);
-        }
-
-        const rounds = parseInput(data);
-        console.log('1) Your total score is: ', calculateResult(rounds));
-        console.log('2) Your total second score is: ', calculateDecryptedResult(rounds));
-    });
+    const data = input.loadInput('2022', 'day-2');
+    const rounds = parseInput(data);
+    console.log('1) Your total score is: ', calculateResult(rounds));
+    console.log('2) Your total second score is: ', calculateDecryptedResult(rounds));
 })().catch(e => console.error(e));

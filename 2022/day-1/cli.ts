@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+import * as input from '../../utils/input';
 
 function calculate(elfCalories: string): number {
     const food = elfCalories.split('\n');
@@ -25,15 +24,7 @@ function getTopThreeCalories(allCalories: string): number {
 }
 
 (async function run() {
-    const absolutePath = path.resolve("./2022/day-1/input.txt");
-    console.log(absolutePath);
-
-    fs.readFile(absolutePath, 'utf-8', (err: any, data: string) => {
-        if (err) {
-            console.log('ERROR:', err);
-        }
-
-        console.log('1) Maximum value: ', getMaxCalories(data));
-        console.log('2) Top three calories value: ', getTopThreeCalories(data));
-    });
+    const data = input.loadInput('2022', 'day-1');
+    console.log('1) Maximum value: ', getMaxCalories(data));
+    console.log('2) Top three calories value: ', getTopThreeCalories(data));
 })().catch(e => console.error(e));
