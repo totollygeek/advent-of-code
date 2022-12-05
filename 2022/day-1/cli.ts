@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import * as input from '../../utils/input';
 
 function calculate(elfCalories: string): number {
